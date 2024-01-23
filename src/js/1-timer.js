@@ -55,9 +55,12 @@ document.addEventListener('DOMContentLoaded', function () {
           message: 'The countdown has reached zero!',
         });
         startButton.disabled = true;
+        inputElement.disabled = false;
       } else {
         const { days, hours, minutes, seconds } = convertMs(timeDifference);
         displayTimerValues(days, hours, minutes, seconds);
+        startButton.disabled = true;
+        inputElement.disabled = true;
       }
     }
 

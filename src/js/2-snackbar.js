@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const delay = parseInt(delayInput.value, 10);
     const state = stateInput.value;
 
+    form.reset();
+
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => {
         if (state === 'fulfilled') {
